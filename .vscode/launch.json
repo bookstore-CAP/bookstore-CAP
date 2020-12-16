@@ -1,0 +1,59 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "books",
+      "cwd": "${workspaceFolder}/app/books",
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/app/books\"}"
+      }
+    },
+    {
+      "name": "Run bookstore-3",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "com.sap.cap.bookstore.Application",
+      "projectName": "bookstore",
+      "preLaunchTask": "Build bookstore",
+      "cwd": "${workspaceFolder}/bookstore",
+      "envFile": "${workspaceFolder}/bookstore/.env3",
+      "args": [
+        "--spring.profiles.active=default"
+      ],
+      "env": {
+        "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/bookstore\\\",\\\"profileName\\\":\\\"default\\\"}\"}"
+      }
+    },
+    {
+      "name": "newbooks",
+      "cwd": "${workspaceFolder}/app/newbooks",
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/app/newbooks\"}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "definitions": {
+    "ZGBLMTORDER_SRV": {
+      "kind": "service"
+    },
+    "ZGBLMTORDER_SRV.ENTITY008Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "repPersonNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 70
+        },
+        "feedBack": {
+          "type": "cds.String",
+          "length": 1
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY001Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "orderNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "statusNo": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "productID": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "customerNo": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "issDate": {
+          "type": "cds.Timestamp"
+        },
+        "issTime": {
+          "type": "cds.Time"
+        },
+        "issContent": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "repPersonNo": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "dateFrom": {
+          "type": "cds.Timestamp"
+        },
+        "timeFrom": {
+          "type": "cds.Time"
+        },
+        "dateTo": {
+          "type": "cds.Timestamp"
+        },
+        "timeTo": {
+          "type": "cds.Time"
+        },
+        "repContent": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "price": {
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3
+        },
+        "currKey": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "feedBack": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "deleteFlag": {
+          "type": "cds.Boolean"
+        },
+        "action": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ENTITY004": {
+          "type": "cds.Association",
+          "target": "ZGBLMTORDER_SRV.ENTITY004Set"
+        },
+        "ENTITY002": {
+          "type": "cds.Association",
+          "target": "ZGBLMTORDER_SRV.ENTITY002Set"
+        },
+        "ENTITY003": {
+          "type": "cds.Association",
+          "target": "ZGBLMTORDER_SRV.ENTITY003Set"
+        },
+        "ENTITY005": {
+          "type": "cds.Association",
+          "target": "ZGBLMTORDER_SRV.ENTITY005Set"
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY002Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "productID": {
+          "key": true,
+          "type": "cds.String",
+          "length": 16
+        },
+        "languageKey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "productName": {
+          "type": "cds.String",
+          "length": 24
+        },
+        "productCategory": {
+          "type": "cds.String",
+          "length": 24
+        },
+        "productInfo": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "technicalInfo": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "additionalInfo": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "imageURL": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "partsInfo": {
+          "type": "cds.String",
+          "length": 200
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY003Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "customerNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "languageKey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "customerName1": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "customerName2": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "telepNo": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "faxNo": {
+          "type": "cds.String",
+          "length": 31
+        },
+        "emailAdd": {
+          "type": "cds.String",
+          "length": 132
+        },
+        "countryName": {
+          "type": "cds.String",
+          "length": 15
+        },
+        "cityName": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "streetNo": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "postalNo": {
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY004Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "repPersonNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 12
+        },
+        "languageKey": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "repPersonName1": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "repPersonName2": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "telepNo": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "faxNo": {
+          "type": "cds.String",
+          "length": 31
+        },
+        "emailAdd": {
+          "type": "cds.String",
+          "length": 132
+        },
+        "countryName": {
+          "type": "cds.String",
+          "length": 15
+        },
+        "cityName": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "streetNo": {
+          "type": "cds.String",
+          "length": 35
+        },
+        "postalNo": {
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY005Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "orderNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "itemNo": {
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "userName": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "changeDate": {
+          "type": "cds.Timestamp"
+        },
+        "changeBy": {
+          "type": "cds.Time"
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY006Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "fileName": {
+          "key": true,
+          "type": "cds.String",
+          "length": 200
+        },
+        "countAll": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "countSucc": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "countFail": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "uploadDate": {
+          "type": "cds.Timestamp"
+        },
+        "uploadTime": {
+          "type": "cds.Time"
+        },
+        "message": {
+          "type": "cds.LargeString"
+        },
+        "mimeType": {
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY007Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "title": {
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "subtitle": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "icon": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "infostate": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "number": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "numberdigits": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "numberfactor": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "numberstate": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "numberunit": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "info": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "statearrow": {
+          "type": "cds.String",
+          "length": 40
+        },
+        "targetparams": {
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY009Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "feedBack": {
+          "key": true,
+          "type": "cds.String",
+          "length": 1
+        },
+        "fdbacktxt": {
+          "type": "cds.String",
+          "length": 200
+        },
+        "count": {
+          "type": "cds.Integer"
+        },
+        "average": {
+          "type": "cds.Decimal",
+          "precision": 1,
+          "scale": 1
+        }
+      }
+    },
+    "ZGBLMTORDER_SRV.ENTITY010Set": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "month": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6
+        },
+        "countAll": {
+          "type": "cds.Integer"
+        },
+        "countNew": {
+          "type": "cds.Integer"
+        },
+        "countRepaired": {
+          "type": "cds.Integer"
+        },
+        "countClosed": {
+          "type": "cds.Integer"
+        },
+        "countDeleted": {
+          "type": "cds.Integer"
+        }
+      }
+    }
+  }
+}
